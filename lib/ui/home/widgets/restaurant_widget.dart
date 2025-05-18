@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tech_taste_alura/model/restaurant.dart';
+import 'package:tech_taste_alura/ui/restaurant/restaurant_screen.dart';
 
 class RestaurantWidget extends StatelessWidget {
   final Restaurant restaurant;
@@ -8,7 +9,16 @@ class RestaurantWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) {
+              return RestaurantScreen(restaurant: restaurant);
+            },
+          ),
+        );
+      },
       child: Row(
         spacing: 12.0,
         children: [

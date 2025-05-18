@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:tech_taste_alura/data/categories_data.dart';
 import 'package:tech_taste_alura/data/restaurant_data.dart';
 import 'package:tech_taste_alura/model/restaurant.dart';
+import 'package:tech_taste_alura/ui/_core/widgets/app_bar.dart';
 import 'package:tech_taste_alura/ui/home/widgets/category_widget.dart';
 import 'package:tech_taste_alura/ui/home/widgets/restaurant_widget.dart';
 
@@ -14,6 +15,7 @@ class HomeScreen extends StatelessWidget {
     RestaurantData restaurantData = Provider.of<RestaurantData>(context);
     return Scaffold(
       drawer: Drawer(),
+      appBar: getAppbar(context: context),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.0),
         child: SingleChildScrollView(
