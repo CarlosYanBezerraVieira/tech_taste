@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tech_taste_alura/data/restaurant_data.dart';
 import 'package:tech_taste_alura/ui/_core/app_theme.dart';
+import 'package:tech_taste_alura/ui/_core/bg_provider.dart';
 import 'package:tech_taste_alura/ui/splash/splash_screen.dart';
 
 void main() async {
@@ -14,6 +15,11 @@ void main() async {
         ChangeNotifierProvider(
           create: (context) {
             return restaurantData;
+          },
+        ),
+        ChangeNotifierProvider(
+          create: (context) {
+            return BgProvider();
           },
         ),
       ],
